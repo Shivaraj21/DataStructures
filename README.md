@@ -3,8 +3,7 @@
 This repository contains programs related to Data Structures and Algorithm taught by Bhavani Shankar sir. I created this repository to help other students to learn and contribute 
 
 
-
-
+## How to download
 If you have git in your pc, use this command to download into local folder
 ```
 git clone https://github.com/Shivaraj21/DataStructures.git
@@ -17,6 +16,7 @@ if don't have git in your pc, click code on right side and then download zip
 
 
 
+## How to contribute
 If you like to contribute to this repository,
 1. Fork the repo on GitHub
 2. Clone the project to your pc
