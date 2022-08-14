@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<conio.h>
 
 void arr_insert(int new,int pos,int arr[],int *n);
 void arr_delete(int pos, int arr[], int *n);
@@ -17,7 +18,7 @@ int main() {
 	//forever loop
     for(;;) {
         printf("\nplease enter 1:to insert 2:to delete 3:to display 4:to exit\n");
-
+        
         scanf("%d",&choice);
         switch (choice) {
         case 1:
