@@ -8,7 +8,8 @@ git clone https://github.com/Shivaraj21/DataStructures.git
 ```
 
 if don't have git in your pc, click code on right side and then download zip
-![image](https://user-images.githubusercontent.com/94275612/184522584-37a94b0a-3322-4288-8efe-1fcf54e4742e.png)
+![Screenshot_1](https://user-images.githubusercontent.com/94275612/184523665-3880ae6a-f36e-42ef-ac88-462f71f3fa32.jpg)
+
 
 
 ### How to contribute
