@@ -4,10 +4,22 @@ This repository contains programs related to Data Structures and Algorithm taugh
 
 
 
-If you have git in your pc, use this command to download into local folder
 
+If you have git in your pc, use this command to download into local folder
 ```
 git clone https://github.com/Shivaraj21/DataStructures.git
 ```
 
-if don't have git, click code on right side and then download zip![](C:\Users\lucario440\AppData\Roaming\marktext\images\2022-08-14-09-58-49-image.png)
+
+
+if don't have git in your pc, click code on right side and then download zip
+![image](https://user-images.githubusercontent.com/94275612/184522584-37a94b0a-3322-4288-8efe-1fcf54e4742e.png)
+
+
+
+If you like to contribute to this repository,
+1. Fork the repo on GitHub
+2. Clone the project to your pc
+3. Commit changes to your own branch
+4. Push your work back up to your fork
+5. Submit a Pull request
