@@ -1,6 +1,6 @@
 # DataStructures
 
-This repository contains programs related to Data Structures and Algorithm taught by Bhavani Shankar sir. I created this repository to help other students to learn and contribute 
+This repository contains programs related to Data Structures and Algorithm taught by Bhavani Shankar sir. I created repository so that I can help other students.
 
 
 ## How to download
