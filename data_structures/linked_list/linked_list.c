@@ -1,11 +1,13 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+// Create a node
 typedef struct  LIST {
     int data;
     struct LIST *link;
 } NODE;
 
+//Declaration of all functions
 NODE *get_node();
 NODE *insert_front(int item, NODE *front);
 NODE *insert_rear(int item, NODE *front);
@@ -15,6 +17,7 @@ void display(NODE *first);
 
 int main() {
     int ch, item;
+    //initial first node as null
     NODE *first = NULL;
     for(;;) {
         printf("Enter 1:to insert-front 2:to insert-rear 3:to delete-front 4:to delete-rear  5:to display 6:to exit\n");
@@ -61,6 +64,7 @@ int main() {
     return 0;
 }
 
+// function for dynamic memory allocation of node
 NODE *get_node() {
     NODE *temp = (NODE *) malloc(sizeof(NODE));
     if (temp == NULL) {
@@ -69,13 +73,21 @@ NODE *get_node() {
     return temp;
 }
 
+//insert front operation
 NODE *insert_front(int item, NODE *first) {
+    //create a new node
     NODE *new = get_node();
+    //if list is empty
+    // new node is a first element
     if (first == NULL){
         new ->data = item;
         new -> link = NULL;
         return new;
     }
+    // if list is not empty then
+    // put a data into new node
+    // link of new node is given to first node
+    // make the new node as a first node
     new -> data = item;
     new -> link = first;
     return new;
@@ -83,17 +95,29 @@ NODE *insert_front(int item, NODE *first) {
 
 NODE *insert_rear(int item, NODE *first) {
     NODE *new = get_node();
+    // create a new node
+    // insert data into the new node
+    // make the link of the new node as null because it is a last element
     new -> data = item;
     new -> link = NULL;
-
+    
+    // if link is empty
+    //new node is a last element
     if (first == NULL)
     {
         return new;
     }
+    // if there is only one element
+    // it is a second element
+    // link of first element is given to second element
     if (first -> link == NULL) {
         first -> link = new;
         return first;
     } else {
+        // if there are more than one element
+        // create temperary node that traverse to the last element
+        // link of last element is given to new element 
+        // now assign new node to last element because last element is a new element
          NODE *temp = first;
          while (temp -> link != NULL) {
             temp = (temp -> link);
@@ -105,10 +129,16 @@ NODE *insert_rear(int item, NODE *first) {
 
 NODE *delete_front(NODE *first) {
     NODE *temp;
+    // if linked is empty
+    // no element can be deleted
     if (first == NULL) {
         printf("List is Empty\n");
         return NULL;
     }
+    // if link is not empty
+    // create a temperary element to store first element
+    // make second element as first element
+    // free the temp
     temp = first;
     first = first -> link;
     printf("The deleted node is %d\n", temp -> data);
@@ -118,15 +148,25 @@ NODE *delete_front(NODE *first) {
 
 NODE *delete_rear(NODE *first) {
     NODE *pres, *prev;
+    // if the list is empty
+    // then there is no node to delete
     if (first == NULL) {
         printf("List is Empty\n");
         return NULL;
     }
+    // if there is only first element
+    // delete first node
+    // assign first node as null
     if (first -> link == NULL) {
         printf("The deleted node is %d\n",first ->data);
         free(first);
         return NULL;
     }
+    //if there is more than one element
+    //create a variable that traverse to the last node(pres)
+    // create a another node that traverse to the node before the last element
+    //free the last node
+    // make the node before the last node as a last element
     prev = NULL;
     pres = first;
     while (pres -> link != NULL) {
