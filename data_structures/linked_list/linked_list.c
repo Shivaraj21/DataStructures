@@ -12,12 +12,13 @@ NODE *insert_rear(int item, NODE *front);
 NODE *delete_front(NODE *first);
 NODE *delete_rear(NODE *first);
 void display(NODE *first);
+void search(int key, NODE *front);
 
 int main() {
     int ch, item;
     NODE *first = NULL;
     for(;;) {
-        printf("Enter 1:to insert-front 2:to insert-rear 3:to delete-front 4:to delete-rear  5:to display 6:to exit\n");
+        printf("Enter 1:to insert-front 2:to insert-rear 3:to delete-front 4:to delete-rear  5:to display 6:to exit 7: to-search\n");
         scanf("%d", &ch);
         
         switch (ch) {
@@ -52,7 +53,13 @@ int main() {
 
         case 6:
             exit(0);
-
+        
+        case 7:
+            printf("Enter the key element\n");
+            scanf("%d", &item);
+            search(item, first);
+            break;
+            
         default:
             printf("Invalid choice\n");
             break;
@@ -146,4 +153,17 @@ void display(NODE *first) {
             temp = (temp -> link);
          }
          printf("\n");
+}
+
+void search(int key, NODE *first) {
+    NODE *temp = first;
+    while(temp != NULL) {
+        if(temp -> data = key) {
+            printf("Element found\n");
+            return;
+        }
+        temp = temp -> link;
+    }
+    printf("Element not found\n");
+    return;
 }
